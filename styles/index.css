@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Signika+Negative:wght@500&display=swap');
+*{
+    font-family: 'Itim', cursive;
+    font-family: 'Signika Negative', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: url('../assets/images/codioful-formerly-gradienta-n2XqPm7Bqhk-unsplash.jpg') no-repeat center center/cover;
+}
+
+.container {
+    margin: 3rem 5rem 3rem 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 700px;
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+}
+
+.container::before {
+    content: "";
+    background-color: #170030;
+    position: absolute;
+    width: 500px;
+    height: 700px;
+    opacity: 0.5;
+    border-radius: 20px;
+    box-shadow: 0 0 100px 10px rgba(255, 255, 255, 0.2) inset;
+}
+
+.ct {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    z-index: 10;
+    color: white;
+}
+
+.ct h3 {
+    margin-bottom: 1em;
+}
+
+.soc-md{
+    width: 45px;
+    height: 45px;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    text-decoration: none;
+    transition: transform 0.2s linear 0s;
+}
+
+.soc-md:hover {
+    background-color: #fff;
+    border-radius: 10px;
+    transform: scale(1.2);
+}
+
+.soc-md img{
+    height: 40px;
+}
+
+.social {
+    text-align: center;
+}
+
+.pf-img {
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    overflow: hidden;
+}
+
+.pf-img img{
+    position: relative;
+    left: -25%;
+    width: 150%;
+    height: 100%;
+}
+
+.title {
+    margin: 1em;
+    font-size: 2em;
+    text-align: center;
+}
+
+a[target="_blank"] {
+    display: inline-block;
+    margin: 0.5em 0.5em 0.5em 0.5em;
+}
+
+@media screen and (max-height: 700px){
+    section {
+        height: auto;
+    }
+}
+
+@media  screen and (max-width: 520px) {
+    .container, .container::before {
+        width: 350px;
+        height: 600px;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+}

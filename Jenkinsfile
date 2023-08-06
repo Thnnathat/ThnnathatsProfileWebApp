@@ -7,5 +7,11 @@ pipeline {
       }
     }
 
+    stage('Run Docker') {
+      steps {
+        sh 'docker run hello-world'
+      }
+    }
+
   }
 }

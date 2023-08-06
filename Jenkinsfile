@@ -7,9 +7,9 @@ pipeline {
       }
     }
 
-    stage('Working Directory') {
+    stage('Powershell') {
       steps {
-        sh 'pwd'
+        pwsh(script: 'pwd', encoding: 'utf-8', label: 'pwd')
       }
     }
 

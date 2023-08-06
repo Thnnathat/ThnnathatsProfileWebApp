@@ -7,5 +7,11 @@ pipeline {
       }
     }
 
+    stage('Hello World') {
+      steps {
+        pwsh 'echo "Hello World"'
+      }
+    }
+
   }
 }

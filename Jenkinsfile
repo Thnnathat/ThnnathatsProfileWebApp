@@ -7,11 +7,5 @@ pipeline {
       }
     }
 
-    stage('Powershell') {
-      steps {
-        pwsh 'pwd'
-      }
-    }
-
   }
 }

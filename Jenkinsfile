@@ -9,7 +9,7 @@ pipeline {
 
     stage('Hello World') {
       steps {
-        pwsh 'echo "Hello World"'
+        powershell 'echo "Hello World"'
       }
     }
 

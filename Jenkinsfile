@@ -13,5 +13,11 @@ pipeline {
       }
     }
 
+    stage('Hello Docker') {
+      steps {
+        powershell 'docker run hello-world'
+      }
+    }
+
   }
 }

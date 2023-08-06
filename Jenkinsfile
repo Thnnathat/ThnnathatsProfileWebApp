@@ -1,15 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('Get Started Jenkins') {
+    stage('Checkout Code') {
       steps {
-        sh 'echo "Get Started Jenkins"'
-      }
-    }
-
-    stage('Run Docker') {
-      steps {
-        sh 'docker run hello-world'
+        git(url: 'https://github.com/Thnnathat/ThnnathatsProfileWebApp', branch: 'main')
       }
     }
 

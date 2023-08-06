@@ -8,8 +8,19 @@ pipeline {
     }
 
     stage('Powershell') {
-      steps {
-        pwsh(script: 'pwd', encoding: 'utf-8', label: 'pwd')
+      parallel {
+        stage('Powershell') {
+          steps {
+            pwsh 'pwd'
+          }
+        }
+
+        stage('Powershell 2') {
+          steps {
+            powershell 'pwd'
+          }
+        }
+
       }
     }
 

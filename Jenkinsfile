@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('Checkout Code') {
+    stage('Get Started Jenkins') {
       steps {
-        git(url: 'https://github.com/Thnnathat/ThnnathatsProfileWebApp', branch: 'main')
+        sh 'echo "Get Started Jenkins"'
       }
     }
 

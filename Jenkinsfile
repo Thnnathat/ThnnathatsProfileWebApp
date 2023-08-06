@@ -2,25 +2,14 @@ pipeline {
   agent any
   stages {
     stage('Checkout Code') {
-      parallel {
-        stage('Checkout Code') {
-          steps {
-            git(url: 'https://github.com/Thnnathat/ThnnathatsProfileWebApp', branch: 'main')
-          }
-        }
-
-        stage('Working Directory') {
-          steps {
-            sh 'pwd'
-          }
-        }
-
+      steps {
+        git(url: 'https://github.com/Thnnathat/ThnnathatsProfileWebApp', branch: 'main')
       }
     }
 
-    stage('Docker Hello World') {
+    stage('Working Directory') {
       steps {
-        sh 'docker run hello-world'
+        sh 'pwd'
       }
     }
 

@@ -9,13 +9,13 @@ pipeline {
 
     stage('Hello World') {
       steps {
-        powershell 'echo "Hello World"'
+        pwsh 'echo "Hello World"'
       }
     }
 
     stage('Hello Docker') {
       steps {
-        powershell 'docker run hello-world'
+        pwsh 'docker run hello-world'
       }
     }
 

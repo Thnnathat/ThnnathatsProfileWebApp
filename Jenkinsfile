@@ -9,13 +9,13 @@ pipeline {
 
     stage('Hello World') {
       steps {
-        pwsh 'echo "Hello World"'
+        sh 'echo "Hello World"'
       }
     }
 
     stage('Hello Docker') {
       steps {
-        pwsh 'docker run hello-world'
+        sh 'docker run hello-world'
       }
     }
 
